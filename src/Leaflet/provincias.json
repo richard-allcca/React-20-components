@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buenos Aires",
+        "voters": 12000000,
+        "pollingStations": 35000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Córdoba",
+        "voters": 3000000,
+        "pollingStations": 8000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+        ]
+      }
+    }
+  ]
+}
