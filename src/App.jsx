@@ -1,6 +1,7 @@
 import './App.css';
 import { MAP_JSON } from './Leaflet/constants';
 import VisglMap from './VisglMap/VisglMap';
+import DualProgressBar from './DualProgressBar/DualProgressBar';
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
           currency: "$"
         } }
       /> */}
-      <VisglMap/>
+      {/* <VisglMap/> */}
+      <DualProgressBar min={0} max={100} />
     </>
   );
 }
