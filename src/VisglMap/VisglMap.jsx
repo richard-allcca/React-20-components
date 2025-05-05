@@ -1,6 +1,7 @@
 import React, { useId } from 'react';
 import { GoogleMap, LoadScript, Polygon } from '@react-google-maps/api';
 import provincesGeoJSON from './data/argentina-provinces.json';
+import './VisglMap.css';
 
 const mapContainerStyle = {
   height: "100vh",
@@ -14,10 +15,11 @@ const center = {
 
 // Límites corregidos para abarcar todo el territorio argentino
 const argentinaBounds = {
-  north: -6.0,  // Extremo norte (Jujuy)
-  south: -6.0,  // Extremo sur (Tierra del Fuego)
-  west: -74.0,   // Extremo oeste (frontera con Chile)
-  east: 10    // Extremo este (costa atlántica e Islas Malvinas)
+  north: -21.0,  // Extremo norte (Jujuy)
+  south: -57.0,  // Extremo sur (Tierra del Fuego)
+  // west: -75.0,   // Extremo oeste (frontera con Chile) - A la izquierda del navegador
+  west: -100.0,   // Extremo oeste (frontera con Chile) - Centrado en el navegador
+  east: 50.0    // Extremo este (costa atlántica e Islas Malvinas)
 };
 
 // Estilo personalizado para que el mapa se parezca a la imagen de ejemplo
@@ -70,21 +72,36 @@ const VisglMap = ({ zoom = 4.7 }) => {
         ? [feature.geometry.coordinates[0]]
         : feature.geometry.coordinates.map(polygon => polygon[0]);
 
+      const provinceName = feature.properties.nombre; // Obtener el nombre de la provincia
+
+
       return coordinates.map((coords, index) => (
-        <Polygon
-          key={`${UUID()}-${index}`}
-          paths={coords.map(coord => ({
-            lng: coord[0],
-            lat: coord[1]
-          }))}
-          options={{
-            fillColor: colors[featureIndex % colors.length],
-            fillOpacity: 0.5,
-            strokeColor: "#0000ff", // Borde azul, como en la imagen de ejemplo
-            strokeOpacity: 1,
-            strokeWeight: 2
-          }}
-        />
+        <React.Fragment key={`${UUID()}-${index}`}>
+          <Polygon
+            paths={coords.map(coord => ({
+              lng: coord[0],
+              lat: coord[1]
+            }))}
+            options={{
+              fillColor: colors[featureIndex % colors.length],
+              fillOpacity: 0.5,
+              strokeColor: "#0000ff", // Borde azul, como en la imagen de ejemplo
+              strokeOpacity: 1,
+              strokeWeight: 2
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              transform: `translate(${coords[0][0]}px, ${coords[0][1]}px)`,
+              color: "#000000",
+              fontSize: "12px",
+              fontWeight: "bold"
+            }}
+          >
+            <p className='province-name' >{provinceName}</p>
+          </div>
+        </React.Fragment>
       ));
     });
   };
