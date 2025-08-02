@@ -1,0 +1,19 @@
+.ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #dfdcdc;
+  border-radius: 10px;
+  padding: 10px;
+
+  /* Personaliza el control deslizante */
+  .progressInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: #111;
+    cursor: grab;
+    box-shadow: 1px 1px 4px 3px rgba(85, 85, 85, 0.6);
+  }
+}

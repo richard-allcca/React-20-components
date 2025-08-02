@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+}
+
+.space {
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: cornflowerblue;
+  color: rgb(32, 36, 41);
+  font-weight: 900;
+  font-size: 18px;
+  width: 500px;
+  height: 250px;
+}
+
+.isVisible {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: cornflowerblue;
+  color: rgb(32, 36, 41);
+  font-size: 20px;
+  padding: 20px;
+}

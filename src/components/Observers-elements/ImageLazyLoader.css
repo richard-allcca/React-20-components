@@ -1,0 +1,15 @@
+.content-observer {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-observer>img {
+  width: 500px;
+}
+
+.opacidad {
+  filter: opacity(.5);
+}

@@ -1,53 +1,11 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-body {
-  display: f lex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0;
-  flex-direction: column;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-weight: 600;
-  color: red;
-}
-
-p {
-  margin: 0;
-  line-height: 1.5;
-}
-
-#root {
-  width: 100%;
+.App {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-}
-
-.titulo {
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eee;
+  width: 100%;
+  gap: 20px;
+  padding-bottom: 20px;
+  padding-top: 80px;
 }

@@ -1,0 +1,66 @@
+.AppModals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(206, 60%, 83%);
+  padding: 1rem;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: hsl(210, 36%, 96%);
+  border-bottom: 1px solid hsl(210, 36%, 90%);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: hsl(210, 36%, 96%);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-container {
+  position: relative;
+  padding: 1rem;
+  min-width: 320px;
+  max-width: 480px;
+  min-height: 200px;
+  max-height: 600px;
+  overflow-y: auto;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: hsla(0, 0%, 0%, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}

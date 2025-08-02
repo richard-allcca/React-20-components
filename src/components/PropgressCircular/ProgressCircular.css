@@ -1,0 +1,52 @@
+.progress-circular {
+  height: 30vh;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 10px;
+
+  .progressInput {
+    width: 30vw;
+    margin-top: 30px;
+    height: 10px;
+    -webkit-appearance: none;
+    /* background-image: linear-gradient(to right,
+        #12c2e9,
+        #c471ed,
+        #f64f59); */
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+
+  .progressInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #111;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px 3px rgba(85, 85, 85, 0.6);
+  }
+}
+
+.circle {
+  svg {
+    width: 30vw;
+  }
+
+  .circle-background {
+    fill: none;
+    stroke: #ddd;
+  }
+
+  .circle-progress {
+    fill: none;
+    /* stroke: var(--color1); */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .circle-text {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}

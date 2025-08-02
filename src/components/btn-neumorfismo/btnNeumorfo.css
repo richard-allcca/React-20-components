@@ -1,0 +1,37 @@
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border: 1px solid #ddd;
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .btn-neo {
+    font-weight: semibold;
+    color: #444;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #eee;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+    box-shadow: .5rem .5rem 1rem #ccc,
+      -.5rem -.5rem 1rem #fff;
+  }
+
+  .btn-neo:hover {
+    box-shadow: .5rem .5rem 1rem #fff,
+      -.5rem -.5rem 1rem #ccc;
+  }
+
+  .btn-neo:active {
+    box-shadow: inset .2rem .2rem 1rem #fff,
+      inset -.2rem -.2rem 1rem #ccc;
+  }
+}
